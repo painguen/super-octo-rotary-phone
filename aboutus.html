@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<div class="header">
+    <title>Learning about Indiana</title>
+    <h1>About us</h1>
+</div>
+<div class="navv">
+    <nav>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="Indianapolis.html">Indianapolis</a>
+        <a href="Evansville.html">Evansville</a>
+        <a href="Richmond.html">Richmond</a>
+        <a href="aboutus.html">About us</a>
+    </nav>
+</div>
+</head>
+<body class="otherpage">
+<div class="mainstuff">
+    <div class="leftside">
+        <div class = "CitiesHeader">
+            <h2>Our Mission</h2>
+        </div>
+        <div class = "Cities">
+            <h3>About us</h3>
+            <p>The goal of this page is to spread info about some of the many cities you can see in Indiana.</p>
+        </div>
+    </div>
+    <div class="rightside">
+        <div class="citiesimages">
+                    <h2>Contact Us</h2>
+        <form id="contactForm">
+          <label for="name">First Name:</label><br />
+          <input type="text" id="name" name="name" /><br />
+
+          <label for="name2">Last Name:</label><br />
+          <input type="text" id="name2" name="name2" /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" /><br />
+
+          <label for="email2">Confirm Email:</label><br />
+          <input type="email" id="email2" name="email2" /><br />
+
+          <label for="feedback">Feedback:</label><br />
+          <textarea id="feedback" name="feedback"></textarea><br />
+
+          <input type="reset" value="Clear Form" />
+          <input type="button" id="submitBtn" value="Submit" />
+        </form>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+  document.getElementById("submitBtn").addEventListener("click", function () {
+    const email = document.getElementById("email").value.trim();
+    const email2 = document.getElementById("email2").value.trim();
+
+    if (email !== email2) {
+      alert("Emails do not match!");
+    }
+  });
+</script>
